@@ -16,8 +16,5 @@ public class ExemploScanner {
             System.out.println("Valor Inválido");
         }
         System.out.println(nome + " - " + idade);
-
-
-
     }
 }
