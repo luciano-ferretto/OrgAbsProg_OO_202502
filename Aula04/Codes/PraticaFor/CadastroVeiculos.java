@@ -7,9 +7,9 @@ public class CadastroVeiculos {
     static List<String> veiculos = new ArrayList<>();
 
     public static void main(String[] args) {
-        
+        System.out.println("==== Bem vindo ao Controle de Frotas ====");
         String menu = """
-                ==== Bem vindo ao Controle de Frotas ====
+                MENU
                 Escolha uma das opções abaixo:
                 1 - Cadastro de Veículo
                 2 - Listar Veículos
@@ -23,12 +23,18 @@ public class CadastroVeiculos {
             switch (opcao) {
                 case 1:
                     cadastraVeiculo();
+                    System.out.println("Pressione Enter para continuar");
+                    scan.nextLine(); //Forçar uma parada
                     break;
                 case 2:
                     listaVeiculos();
+                    System.out.println("Pressione Enter para continuar");
+                    scan.nextLine(); //Forçar uma parada
                     break;
                 case 3:
-                    //TODO exclui veículo
+                    removeVeiculo();
+                    System.out.println("Presione Enter para continuar");
+                    scan.nextLine();
                     break;
                 case 0:
                     System.out.println("Volte Sempre!!!!");
@@ -52,5 +58,12 @@ public class CadastroVeiculos {
         for (String veiculo : veiculos) {
             System.out.println("Veículo " + i++ + ": " + veiculo);
         }
+    }
+
+    static void removeVeiculo(){
+        listaVeiculos();
+        int i = Input.scanInt("Qual o veículo você quer remover? ", scan);
+        veiculos.remove(--i);
+        System.out.println("Veículo removido");
     }
 }
