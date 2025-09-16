@@ -36,12 +36,21 @@ public class Biblioteca {
         return acervo;
     }
 
-    public List<Livro> pesquisar(String titulo) {
+    public List<Livro> pesquisar(String titulo){
+        return pesquisar(titulo, null);
+    }
+
+    public List<Livro> pesquisar(String titulo, String autor) {
         List<Livro> livrosEncontrados = new ArrayList<>();
         for (Livro livro : acervo) {
-            if (livro.getTitulo().toLowerCase().contains(titulo.toLowerCase()))
-                livrosEncontrados.add(livro);
+            if (livro.getTitulo().toLowerCase().contains(titulo.toLowerCase())){
+                if (autor == null || 
+                        livro.getAutor().toLowerCase().contains(autor.toLowerCase()))
+                    livrosEncontrados.add(livro);
+            }
         }
         return livrosEncontrados;
     }
+
+
 }

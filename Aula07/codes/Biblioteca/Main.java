@@ -1,7 +1,8 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    //Dependências
+    // Dependências
     private static Biblioteca biblioteca = new Biblioteca();
     private static Scanner scan = new Scanner(System.in);
 
@@ -44,7 +45,7 @@ public class Main {
         } while (opcao != 0);
     }
 
-    private static void cadastrarLivro(){
+    private static void cadastrarLivro() {
         String titulo = Input.scanString("Digite o Título: ", scan);
         String autor = Input.scanString("Digite o Autor: ", scan);
         int anoPublicacao = Input.scanInt("Digite o ano de publicação: ", scan);
@@ -60,18 +61,32 @@ public class Main {
 
     private static void listarAcervo() {
         var acervo = biblioteca.pesquisar();
-        //List<Livro> acervo = biblioteca.pesquisar();
-        System.out.println("Livros cadastrados");
-        for (int i = 0; i < acervo.size(); i++) {
-            System.out.println("Livro " + (i + 1) + ": " + acervo.get(i));
-        }
+        // List<Livro> acervo = biblioteca.pesquisar();
+        imprimirLista(acervo);
     }
 
     private static void pesquisarLivro() {
         String titulo = Input.scanString("Digite o título que procuras: ", scan);
-        var livros = biblioteca.pesquisar(titulo);
-        for (Livro livro : livros) {
-            System.out.println(livro);
+        String pesquisaAutor = Input.scanString(
+            "Deseja pesquiar por autor? (S/N) ", scan);
+        List<Livro> livros;
+        if (pesquisaAutor.toLowerCase().charAt(0) == 's'){
+            String autor = Input.scanString("Digite o nome do autor: ", scan);
+            livros = biblioteca.pesquisar(titulo, autor);
+        } else {
+            livros = biblioteca.pesquisar(titulo);
+        }
+        imprimirLista(livros);
+    }
+
+    private static void imprimirLista(List<Livro> acervo) {
+        if (acervo == null || acervo.isEmpty())
+            System.out.println("Nenhum Livro Encontrado");
+        else {
+            System.out.println("Livros Encrontrados");
+            for (int i = 0; i < acervo.size(); i++) {
+                System.out.println("Livro " + (i + 1) + ": " + acervo.get(i));
+            }
         }
     }
 
