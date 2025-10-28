@@ -27,4 +27,18 @@ public class Input {
                 return value;
         }
     }
+
+    public static double scanDouble(String message, Scanner scan) {
+        while (true) {
+            try {
+                System.out.print(message);
+                double value = scan.nextDouble();
+                return value;
+            } catch (Exception e) {
+                System.out.println("Valor Inválido! Digite um número inteiro");
+            } finally {
+                scan.nextLine();
+            }
+        }
+    }
 }

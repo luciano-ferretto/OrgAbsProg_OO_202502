@@ -1,4 +1,6 @@
-public class Livro {
+import java.time.LocalDate;
+
+public abstract class Livro {
     private String titulo;
     private String autor;
     private int anoPublicacao;
@@ -39,14 +41,20 @@ public class Livro {
         this.numeroPaginas = numeroPaginas;
     }
 
-    
+    @Override
     public String toString() {
+        super.toString();
         return "Titulo=" + titulo 
                 + ", autor=" + autor 
                 + ", anoPublicacao=" + anoPublicacao 
                 + ", numeroPaginas=" + numeroPaginas;
     }
+
+    public final int getTempoPublicacao(){
+        int anoAtual = LocalDate.now().getYear();
+        return anoAtual - this.anoPublicacao;
+    }
     
-    
+    public abstract String getTipoLivro();
 
 }
