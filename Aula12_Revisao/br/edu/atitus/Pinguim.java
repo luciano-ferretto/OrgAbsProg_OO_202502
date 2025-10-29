@@ -1,3 +1,7 @@
+package br.edu.atitus;
+
+import br.edu.atitus.interfaces.Nadador;
+
 public class Pinguim extends Ave implements Nadador {
 
     public Pinguim(String nome, int idade, String corPenas) {

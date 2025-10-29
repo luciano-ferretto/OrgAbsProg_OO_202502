@@ -1,3 +1,7 @@
+package br.edu.atitus;
+
+import br.edu.atitus.interfaces.Nadador;
+
 public class Traira extends Peixe implements Nadador{
 
     public Traira(String nome, int idade) {

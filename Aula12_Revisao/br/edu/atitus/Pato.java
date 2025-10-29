@@ -1,3 +1,9 @@
+package br.edu.atitus;
+
+import br.edu.atitus.interfaces.Corredor;
+import br.edu.atitus.interfaces.Nadador;
+import br.edu.atitus.interfaces.Voador;
+
 public class Pato extends Ave implements Voador, Nadador, Corredor{
 
     public Pato(String nome, int idade, String corPenas) {

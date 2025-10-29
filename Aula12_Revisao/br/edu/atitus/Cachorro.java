@@ -1,9 +1,18 @@
+package br.edu.atitus;
+
+import br.edu.atitus.interfaces.Corredor;
+import br.edu.atitus.interfaces.Nadador;
+
 public class Cachorro extends Mamifero implements Nadador,Corredor{
 
-    public Cachorro(String nome, int idade) {
+    private String raca;
+
+    public Cachorro(String nome, int idade, String raca) {
         super(nome, idade, true);
+        this.raca = raca;
     }
 
+    
     @Override
     public void emitirSom() {
         System.out.println(getNome() + " está latindo");
@@ -22,6 +31,11 @@ public class Cachorro extends Mamifero implements Nadador,Corredor{
     @Override
     public void nadar() {
         System.out.println(getNome() + " está nadando estilo cachorrinho");
+    }
+
+
+    public String getRaca() {
+        return raca;
     }
     
 }

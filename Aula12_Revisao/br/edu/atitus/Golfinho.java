@@ -1,3 +1,7 @@
+package br.edu.atitus;
+
+import br.edu.atitus.interfaces.Nadador;
+
 public class Golfinho extends Mamifero implements Nadador{
 
     public Golfinho(String nome, int idade) {

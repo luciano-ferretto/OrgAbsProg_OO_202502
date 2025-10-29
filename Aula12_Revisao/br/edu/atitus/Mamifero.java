@@ -1,3 +1,4 @@
+package br.edu.atitus;
 public abstract class Mamifero extends Animal {
     private boolean temPelo;
 

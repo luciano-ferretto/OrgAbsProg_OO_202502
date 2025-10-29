@@ -1,3 +1,4 @@
+package br.edu.atitus;
 public abstract class Animal {
     private static int contador=0;
 
@@ -19,7 +20,7 @@ public abstract class Animal {
     public abstract void emitirSom();
     public abstract void comer();
 
-    public String getNome() {
+    public final String getNome() {
         return nome;
     }
     public void setNome(String nome) {

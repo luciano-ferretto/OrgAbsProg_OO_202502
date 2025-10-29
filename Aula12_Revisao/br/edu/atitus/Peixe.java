@@ -1,3 +1,4 @@
+package br.edu.atitus;
 public abstract class Peixe extends Animal {
     private String tipoAgua; //Água doce ou salgada
 

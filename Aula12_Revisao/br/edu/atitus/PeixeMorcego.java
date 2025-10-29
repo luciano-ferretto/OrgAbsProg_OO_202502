@@ -1,3 +1,4 @@
+package br.edu.atitus;
 public class PeixeMorcego extends Peixe {
 
     public PeixeMorcego(String nome, int idade) {
