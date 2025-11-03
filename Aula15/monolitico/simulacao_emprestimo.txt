@@ -1,0 +1,16 @@
+SIMULAÇÃO - 03/11/2025 00:25:10
+------------------------------
+Empréstimo: R$ 10000,00
+Parcelas: 15
+Juros/mês: 5,00%
+Valor da Parcela: R$ 1166,67
+Total Pago: R$ 17500,00
+
+SIMULAÇÃO - 03/11/2025 00:25:36
+------------------------------
+Empréstimo: R$ 100,00
+Parcelas: 10
+Juros/mês: 5,00%
+Valor da Parcela: R$ 15,00
+Total Pago: R$ 150,00
+

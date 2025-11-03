@@ -6,6 +6,7 @@ import entities.Gato;
 public class Main {
     public static void main(String[] args) {
 
+      
         Cesta<Fruta> cestaFrutas = new Cesta<>(10);
         cestaFrutas.inserir(new Fruta("Maçã"));
         cestaFrutas.inserir(new Fruta("Pera"));

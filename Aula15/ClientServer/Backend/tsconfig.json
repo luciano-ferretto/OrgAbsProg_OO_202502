@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    /* Opções Básicas */
+    "target": "es2020",                                /* Especifica a versão do ECMAScript alvo para a saída JS */
+    "module": "commonjs",                              /* Especifica o sistema de módulos a ser usado (essencial para Node.js) */
+    "rootDir": "./",                                   /* Especifica a pasta raiz dos arquivos TypeScript. */
+    "outDir": "./dist",                                /* Especifica o diretório de saída para os arquivos JavaScript compilados. */
+    "esModuleInterop": true,                           /* Permite a interoperabilidade entre módulos CommonJS e ES Modules (útil para importações como 'import express from "express"'). */
+    "forceConsistentCasingInFileNames": true,          /* Garante que a capitalização dos nomes dos arquivos seja consistente. */
+    "strict": true,                                    /* Habilita um conjunto rigoroso de verificações de tipo. ALTAMENTE RECOMENDADO para Type Safety. */
+    "skipLibCheck": true,                              /* Pula a verificação de tipo dos arquivos de definição de biblioteca (mais rápido). */
+
+    /* Opções de Módulo */
+    "moduleResolution": "node",                        /* Define como os módulos são resolvidos (necessário para Node.js) */
+
+    /* Opções de Código */
+    "sourceMap": true,                                 /* Gera arquivos .map para facilitar a depuração (debug). */
+    "resolveJsonModule": true,                         /* Permite importar módulos JSON. */
+
+    /* Opções Avançadas */
+    "experimentalDecorators": true,                    /* Habilita suporte experimental a decorators (necessário se usar frameworks como NestJS ou TypeORM, ou no futuro com Spring/TypeScript). */
+    "emitDecoratorMetadata": true                      /* Emite metadados de design de tipo para os decorators. */
+  },
+  "include": [
+    "**/*.ts"                                          /* Inclui todos os arquivos .ts no diretório atual e subdiretórios. */
+  ],
+  "exclude": [
+    "node_modules",                                    /* Exclui a pasta de dependências. */
+    "dist"                                             /* Exclui a pasta de saída para evitar loops de compilação. */
+  ]
+}
