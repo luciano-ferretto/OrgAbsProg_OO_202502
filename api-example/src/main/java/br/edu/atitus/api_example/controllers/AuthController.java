@@ -17,8 +17,14 @@ import br.edu.atitus.api_example.services.UserService;
 @RequestMapping("/auth")
 public class AuthController {
 	
-	private final UserService service = new UserService();
+	//AuthController DEPENDE de um objeto UserService
+	private final UserService service;
 	
+	public AuthController(UserService service) {
+		super();
+		this.service = service;
+	}
+
 	@PostMapping("/signup")
 	public ResponseEntity<UserEntity> postSignup(
 			@RequestBody SignupDTO dto) throws Exception{
